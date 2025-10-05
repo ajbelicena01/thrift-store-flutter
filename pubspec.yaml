@@ -30,14 +30,14 @@ dev_dependencies:
 flutter_icons:
   android: true            # generate for Android
   ios: true                # generate for iOS
-  image_path: "assets/app_logo.png"
+  image_path: "assets/app-logo.png"
   # optionally, if you need adaptive icons on Android:
   adaptive_icon_background: "#FFFCFCFC"
-  adaptive_icon_foreground: "assets/app_logo.png"
+  adaptive_icon_foreground: "assets/app-logo.png"
 
 flutter_native_splash:
   # Your logo asset (transparent PNG recommended)
-  image: assets/app_logo.png
+  image: assets/app-logo.png
 
   # Background color
   color: "#ffffff"
@@ -58,7 +58,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/app_logo.png
+    - assets/app-logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

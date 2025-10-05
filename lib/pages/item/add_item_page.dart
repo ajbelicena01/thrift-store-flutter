@@ -68,7 +68,7 @@ class AddItemPageState extends State<AddItemPage> {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF7209B7), Color(0xFFFF006E)],
+          colors: [Color(0xFF213a57), Color(0xFF0ad1c8)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -81,10 +81,11 @@ class AddItemPageState extends State<AddItemPage> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          iconTheme: const IconThemeData(color: Colors.white),
           title: Text(
-            '✨ Add Your Thrift',
-            style: GoogleFonts.poppins(
-                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+            '🔥 Add Your Thrift ⚡',
+            style: GoogleFonts.bebasNeue(
+                fontSize: 44, fontWeight: FontWeight.bold, color: Color(0xFFf5f5f5)),
           ),
           centerTitle: true,
         ),
@@ -144,11 +145,11 @@ class AddItemPageState extends State<AddItemPage> {
                   icon: const Icon(Icons.photo_library, size: 24),
                   label: Text(
                     'Choose Photo',
-                    style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+                    style: GoogleFonts.archivo(fontWeight: FontWeight.w600),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white.withOpacity(0.9),
-                    foregroundColor: Colors.deepPurple,
+                    backgroundColor: Color(0xFF45dfb1).withOpacity(0.9),
+                    foregroundColor: Color(0xFF213a57),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),

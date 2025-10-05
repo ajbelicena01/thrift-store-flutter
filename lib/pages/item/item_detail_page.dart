@@ -22,7 +22,7 @@ class ItemDetailPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFF72585), Color(0xFF3A0CA3)],
+            colors: [Color(0xFF213a57), Color(0xFF0ad1c8)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -33,14 +33,14 @@ class ItemDetailPage extends StatelessWidget {
             builder: (context, snap) {
               if (snap.connectionState != ConnectionState.done) {
                 return const Center(
-                  child: CircularProgressIndicator(color: Colors.white),
+                  child: CircularProgressIndicator(color: Color(0xFF45dfb1)),
                 );
               }
               if (snap.hasError) {
                 return Center(
                   child: Text(
                     'Error: ${snap.error}',
-                    style: GoogleFonts.poppins(color: Colors.redAccent),
+                    style: GoogleFonts.archivo(color: Colors.redAccent),
                   ),
                 );
               }
@@ -49,7 +49,7 @@ class ItemDetailPage extends StatelessWidget {
                 return Center(
                   child: Text(
                     'Item not found 🤷',
-                    style: GoogleFonts.poppins(color: Colors.white),
+                    style: GoogleFonts.archivo(color: Colors.white),
                   ),
                 );
               }
@@ -70,10 +70,10 @@ class ItemDetailPage extends StatelessWidget {
                           const SizedBox(width: 8),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.archivo(
                               fontSize: 22,
                               fontWeight: FontWeight.w600,
-                              color: Colors.white,
+                              color: Color(0xFFf5f5f5),
                             ),
                           ),
                         ],
@@ -117,19 +117,19 @@ class ItemDetailPage extends StatelessWidget {
                       // Title & price
                       Text(
                         item.title,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.archivo(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color(0xFFf5f5f5),
                         ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         '₱ ${item.price.toStringAsFixed(2)}',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.archivo(
                           fontSize: 22,
                           fontWeight: FontWeight.w500,
-                          color: Colors.yellowAccent,
+                          color: Color(0xFF80ed99),
                         ),
                       ),
                       const SizedBox(height: 24),
@@ -138,25 +138,26 @@ class ItemDetailPage extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
+                          color: Color(0xFFf5f5f5).withOpacity(0.9),
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Description',
-                              style: GoogleFonts.poppins(
+                              'Description'.toUpperCase(),
+                              style: GoogleFonts.archivo(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.deepPurple,
+                                color: Color(0xFF213a57),
                               ),
                             ),
                             const SizedBox(height: 8),
                             Text(
                               item.description,
-                              style: GoogleFonts.poppins(fontSize: 14),
-                            ),
+                              style: GoogleFonts.archivo(fontSize: 14,
+                              color: Color(0xFF0b6477)
+                            )),
                           ],
                         ),
                       ),
@@ -170,6 +171,7 @@ class ItemDetailPage extends StatelessWidget {
                           child: Row(
                             children: [
                               InfoChip(icon: Icons.person, text: item.uploadedBy),
+
                               const SizedBox(width: 8),
                               InfoChip(icon: Icons.contact_mail, text: item.contactInfo),
                               const SizedBox(width: 8),
@@ -191,7 +193,7 @@ class ItemDetailPage extends StatelessWidget {
                     right: 16,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.yellowAccent,
+                        backgroundColor: Color(0xFF14919B),
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -210,14 +212,14 @@ class ItemDetailPage extends StatelessWidget {
                             context: context,
                             builder: (_) => AlertDialog(
                               title: Text('Contact Owner',
-                                  style: GoogleFonts.poppins()),
+                                  style: GoogleFonts.archivo()),
                               content: SelectableText(email,
-                                  style: GoogleFonts.poppins()),
+                                  style: GoogleFonts.archivo()),
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(context),
                                   child: Text('Close',
-                                      style: GoogleFonts.poppins()),
+                                      style: GoogleFonts.archivo()),
                                 ),
                               ],
                             ),
@@ -226,10 +228,10 @@ class ItemDetailPage extends StatelessWidget {
                       },
                       child: Text(
                         'Contact Owner',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.archivo(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepPurple,
+                          color: Color(0xFFf5f5f5),
                         ),
                       ),
                     ),

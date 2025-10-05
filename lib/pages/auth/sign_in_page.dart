@@ -21,7 +21,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     final svc = Provider.of<SupabaseService>(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFADD8E6),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -36,8 +36,8 @@ class _SignInPageState extends State<SignInPage> {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFFF72585), // vibrant pink
-                        Color(0xFF3A0CA3), // deep purple
+                        Color(0xFF213a57), // vibrant pink
+                        Color(0xFF0ad1c8), // deep purple
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -48,9 +48,9 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                   child: Text(
-                    '🛍️ Thrift Store',
+                    '🛒 Tindahan ni KiAnEs 🚀',
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.montserrat(
+                    style: GoogleFonts.poppins(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -71,9 +71,9 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _emailCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.email, color: Color(0xFF0b6477)),
                             labelText: 'Email',
-                            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                            labelStyle: GoogleFonts.poppins(color: Colors.grey[600]),
                             filled: true,
                             fillColor: Colors.grey[100],
                             border: OutlineInputBorder(
@@ -87,9 +87,9 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _passCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.lock, color: Color(0xFF0b6477)),
                             labelText: 'Password',
-                            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                            labelStyle: GoogleFonts.poppins(color: Colors.grey[600]),
                             filled: true,
                             fillColor: Colors.grey[100],
                             border: OutlineInputBorder(
@@ -105,7 +105,7 @@ class _SignInPageState extends State<SignInPage> {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFF72585),
+                              backgroundColor: const Color(0xFF0b6477),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -137,7 +137,7 @@ class _SignInPageState extends State<SignInPage> {
                             )
                                 : Text(
                               'Sign In',
-                              style: GoogleFonts.montserrat(
+                              style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -150,8 +150,8 @@ class _SignInPageState extends State<SignInPage> {
                           onPressed: () => Navigator.pushNamed(context, '/signup'),
                           child: Text(
                             'Don’t have an account? Sign Up',
-                            style: GoogleFonts.montserrat(
-                              color: const Color(0xFF3A0CA3),
+                            style: GoogleFonts.poppins(
+                              color: const Color(0xFF14919B),
                             ),
                           ),
                         ),

@@ -14,16 +14,16 @@ class InfoChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.85),
+        color: Color(0xFFf5f5f5).withOpacity(0.85),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
-          Icon(icon, size: 16, color: Colors.deepPurple),
+          Icon(icon, size: 16, color: Color(0xFF0b6477)),
           const SizedBox(width: 4),
           Text(
             text,
-            style: GoogleFonts.poppins(fontSize: 12, color: Colors.deepPurple),
+            style: GoogleFonts.archivo(fontSize: 12, color: Color(0xFF0b6477)),
           ),
         ],
       ),

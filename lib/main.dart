@@ -12,8 +12,8 @@ import 'pages/item/item_detail_page.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
-    url: 'https://dajktqhapgaeegfcgtro.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhamt0cWhhcGdhZWVnZmNndHJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1OTczMDEsImV4cCI6MjA2MjE3MzMwMX0.VBQg5K_ePUumQlxt3MG2YCtNkdnNcwUgqnV8rm5Yekc',
+    url: 'https://lzcwecxtibqakrkygtil.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6Y3dlY3h0aWJxYWtya3lndGlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5MzAxMjksImV4cCI6MjA3MzUwNjEyOX0.TkFg-KVF5iAdhVFRMCJ-m875LzQ_pRVjwiQJMhYAS7A',
   );
   runApp(const App());
 }
@@ -34,7 +34,7 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Thrift Store',
+      title: 'Tindahan ni Angel',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const AuthGate(),
       routes: {
